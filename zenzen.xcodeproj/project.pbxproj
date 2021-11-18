@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		1FE708C2274692AE0004A763 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE708C1274692AE0004A763 /* ContentView.swift */; };
 		1FE708C4274692AF0004A763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FE708C3274692AF0004A763 /* Assets.xcassets */; };
 		1FE708C7274692AF0004A763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FE708C6274692AF0004A763 /* Preview Assets.xcassets */; };
+		1FE708D1274692EF0004A763 /* zip in Frameworks */ = {isa = PBXBuildFile; productRef = 1FE708D0274692EF0004A763 /* zip */; };
+		1FE708D3274692EF0004A763 /* SwiftZip in Frameworks */ = {isa = PBXBuildFile; productRef = 1FE708D2274692EF0004A763 /* SwiftZip */; };
+		1FE708D5274692EF0004A763 /* SwiftZipUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 1FE708D4274692EF0004A763 /* SwiftZipUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE708D5274692EF0004A763 /* SwiftZipUtils in Frameworks */,
+				1FE708D3274692EF0004A763 /* SwiftZip in Frameworks */,
+				1FE708D1274692EF0004A763 /* zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +93,11 @@
 			dependencies = (
 			);
 			name = zenzen;
+			packageProductDependencies = (
+				1FE708D0274692EF0004A763 /* zip */,
+				1FE708D2274692EF0004A763 /* SwiftZip */,
+				1FE708D4274692EF0004A763 /* SwiftZipUtils */,
+			);
 			productName = zenzen;
 			productReference = 1FE708BC274692AE0004A763 /* zenzen.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 1FE708B3274692AE0004A763;
+			packageReferences = (
+				1FE708CF274692EF0004A763 /* XCRemoteSwiftPackageReference "SwiftZip" */,
+			);
 			productRefGroup = 1FE708BD274692AE0004A763 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,6 +343,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FE708CF274692EF0004A763 /* XCRemoteSwiftPackageReference "SwiftZip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftZip/SwiftZip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FE708D0274692EF0004A763 /* zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FE708CF274692EF0004A763 /* XCRemoteSwiftPackageReference "SwiftZip" */;
+			productName = zip;
+		};
+		1FE708D2274692EF0004A763 /* SwiftZip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FE708CF274692EF0004A763 /* XCRemoteSwiftPackageReference "SwiftZip" */;
+			productName = SwiftZip;
+		};
+		1FE708D4274692EF0004A763 /* SwiftZipUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FE708CF274692EF0004A763 /* XCRemoteSwiftPackageReference "SwiftZip" */;
+			productName = SwiftZipUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FE708B4274692AE0004A763 /* Project object */;
 }
